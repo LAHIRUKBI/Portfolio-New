@@ -1,235 +1,177 @@
+'use client';
 import React from 'react';
 import Image from 'next/image';
+import DotGrid from "../components/layout/DotGridBackground";
 
 export default function Education() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-100 pt-20">
+    <div className="min-h-screen relative overflow-hidden">
+      {/* Background with DotGrid */}
+      <div className="fixed inset-0 -z-10">
+        <DotGrid
+          dotSize={2}
+          gap={15}
+          baseColor="#5227FF"
+          activeColor="#5227FF"
+          proximity={120}
+          shockRadius={250}
+          shockStrength={5}
+          resistance={750}
+          returnDuration={1.5}
+        />
+        <div className="absolute inset-0 bg-gradient-to-br from-background/90 via-background/60 to-background/80" />
+      </div>
+
       {/* Education Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
+      <section className="relative z-10 font-sans pt-20 pb-8 px-4 sm:px-6">
         <div className="max-w-6xl mx-auto">
+          
           {/* Header */}
-          <div className="text-center mb-16">
-            <h1 className="text-5xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-4">
-              Education
+          <div className="text-center mb-12">
+            <h1 className="text-3xl sm:text-4xl font-bold text-foreground mb-4">
+              Education & Qualifications
             </h1>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Here are my educational qualifications and certifications that have shaped my journey in technology.
+            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+              My academic journey and professional certifications
             </p>
           </div>
 
-          {/* Main Education Card */}
-          <div className="bg-white rounded-3xl shadow-2xl p-8 mb-16 transform hover:scale-[1.02] transition-all duration-500">
+          {/* Main Education */}
+          <div className="bg-background/50 backdrop-blur-sm rounded-2xl p-8 mb-12 border border-foreground/10 hover:border-foreground/20 transition-all duration-300">
             <div className="flex flex-col lg:flex-row items-center lg:items-start gap-8">
+              {/* Logo Section */}
               <div className="flex-shrink-0">
-                <div className="w-32 h-32 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center shadow-lg">
-                  <span className="text-white font-bold text-lg">SLIIT</span>
+                <div className="relative group">
+                  <div className="absolute -inset-3 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl blur-md opacity-30 group-hover:opacity-50 transition-all duration-500"></div>
+                  <div className="relative w-40 h-40 bg-white rounded-2xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-500 p-3">
+                    <Image
+                      src="/images/SLIIT_LOGO.png"
+                      alt="SLIIT Logo"
+                      width={120}
+                      height={120}
+                      className="object-contain"
+                    />
+                  </div>
                 </div>
               </div>
+              
+              {/* Content Section */}
               <div className="flex-1 text-center lg:text-left">
-                <h2 className="text-2xl font-bold text-gray-800 mb-4">
-                  BSc (Hons) in Information Technology Specializing in Information Technology
+                <h2 className="text-xl font-bold text-foreground mb-2">
+                  BSc (Hons) in Information Technology
                 </h2>
-                <div className="space-y-3">
-                  <p className="text-gray-600 flex items-center justify-center lg:justify-start gap-2">
-                    <strong className="text-gray-800">Institution:</strong> 
-                    SLIIT | Sri Lanka Institute of Information Technology
-                  </p>
-                  <p className="text-gray-600 flex items-center justify-center lg:justify-start gap-2">
-                    <strong className="text-gray-800">Expected Graduation:</strong> 
-                    <span className="bg-gradient-to-r from-green-500 to-emerald-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                      2027
-                    </span>
-                  </p>
-                  <p className="text-gray-600 flex items-center justify-center lg:justify-start gap-2">
-                    <strong className="text-gray-800">Status:</strong> 
-                    <span className="bg-gradient-to-r from-blue-500 to-cyan-600 text-white px-3 py-1 rounded-full text-sm font-semibold">
-                      In Progress
-                    </span>
-                  </p>
+                <p className="text-primary mb-4 font-medium">Specializing in Information Technology</p>
+                
+                <div className="space-y-4">
+                  <div className="flex items-center justify-center lg:justify-start gap-3">
+                    <div className="w-2 h-2 bg-blue-500 rounded-full flex-shrink-0"></div>
+                    <p className="text-muted-foreground">
+                      <span className="font-medium">Sri Lanka Institute of Information Technology (SLIIT)</span>
+                    </p>
+                  </div>
+                  <div className="flex items-center justify-center lg:justify-start gap-3">
+                    <div className="w-2 h-2 bg-green-500 rounded-full flex-shrink-0"></div>
+                    <p className="text-muted-foreground">
+                      <span className="font-medium">Expected Graduation: </span>
+                      <span className="bg-green-500/10 text-green-600 px-3 py-1 rounded-full text-sm font-medium">
+                        2027
+                      </span>
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
 
-      {/* Skills Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/50 backdrop-blur-sm">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h1 className="text-5xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-4">
-              Skills
-            </h1>
-            <p className="text-xl text-gray-600">
-              Technologies and tools I work with
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              {
-                title: "Programming Languages",
-                skills: "Java | C | C++ | Python",
-                icon: "💻",
-                gradient: "from-blue-500 to-cyan-500"
-              },
-              {
-                title: "Web Development",
-                skills: "React JS | Node JS | HTML/CSS | JavaScript | PHP | Tailwind",
-                icon: "🌐",
-                gradient: "from-purple-500 to-pink-500"
-              },
-              {
-                title: "Databases",
-                skills: "MySQL | MongoDB",
-                icon: "🗄️",
-                gradient: "from-green-500 to-emerald-500"
-              },
-              {
-                title: "Android App Development",
-                skills: "Kotlin",
-                icon: "📱",
-                gradient: "from-green-400 to-blue-500"
-              },
-              {
-                title: "Design Technologies",
-                skills: "Adobe Photoshop | Adobe Illustrator | Figma",
-                icon: "🎨",
-                gradient: "from-orange-500 to-red-500"
-              }
-            ].map((skill, index) => (
-              <div 
-                key={index}
-                className="bg-white rounded-2xl shadow-xl p-6 hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-100"
-              >
-                <div className={`w-16 h-16 bg-gradient-to-r ${skill.gradient} rounded-2xl flex items-center justify-center text-2xl mb-4 mx-auto`}>
-                  {skill.icon}
-                </div>
-                <h3 className="text-xl font-bold text-gray-800 text-center mb-3">
-                  {skill.title}
-                </h3>
-                <p className="text-gray-600 text-center leading-relaxed">
-                  {skill.skills}
-                </p>
+          {/* Skills & Certifications Grid */}
+          <div className="grid lg:grid-cols-2 gap-8">
+            
+            {/* Skills Section */}
+            <div>
+              <div className="text-center lg:text-left mb-6">
+                <h2 className="text-2xl font-bold text-foreground mb-2">Technical Skills</h2>
+                <p className="text-muted-foreground">Technologies I work with</p>
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
-      {/* Professional Qualifications Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-16">
-            <h1 className="text-5xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-4">
-              Professional Qualifications
-            </h1>
-            <p className="text-xl text-gray-600">
-              Certifications and courses that enhance my expertise
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {[
-              {
-                title: "JavaScript Essentials 1",
-                institution: "Cisco Certified Network Associate (CCNA)",
-                logo: "/images/javascript-essentials-1.png",
-                verification: null,
-                icon: "📜"
-              },
-              {
-                title: "Networking Basics",
-                institution: "Cisco Certified Network Associate (CCNA)",
-                logo: "/images/Networking Basics Badge.png",
-                verification: null,
-                icon: "🌐"
-              },
-              {
-                title: "Computer Hardware Basics",
-                institution: "Cisco Certified Network Associate (CCNA)",
-                logo: "/images/compute hardware basics.png",
-                verification: null,
-                icon: "💻"
-              },
-              {
-                title: "Certificate course of Web Design for beginners",
-                institution: "University Of Moratuwa (Faculty of information technology)",
-                logo: "/images/University_of_Moratuwa_logo.png",
-                verification: "4uCeJKPGFG",
-                icon: "🎓"
-              }
-            ].map((qualification, index) => (
-              <div 
-                key={index}
-                className="bg-white rounded-3xl shadow-xl p-8 hover:shadow-2xl transition-all duration-500 transform hover:scale-[1.02] border border-gray-100"
-              >
-                <div className="flex items-start gap-6">
-                  <div className="flex-shrink-0">
-                    <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-purple-600 rounded-2xl flex items-center justify-center shadow-lg">
-                      <span className="text-2xl">{qualification.icon}</span>
-                    </div>
+              <div className="space-y-4">
+                {[
+                  {
+                    title: "Frontend Development",
+                    skills: "React, Next.js, TypeScript, Tailwind CSS, HTML/CSS"
+                  },
+                  {
+                    title: "Backend Development", 
+                    skills: "Node.js, Python, PHP, REST APIs"
+                  },
+                  {
+                    title: "Databases",
+                    skills: "MySQL, MongoDB, Firebase"
+                  },
+                  {
+                    title: "Mobile & Tools",
+                    skills: "React Native, Git, Docker, AWS, Figma"
+                  }
+                ].map((skill, index) => (
+                  <div 
+                    key={index}
+                    className="bg-background/50 backdrop-blur-sm rounded-xl p-5 border border-foreground/10 hover:border-foreground/20 transition-all duration-300 hover:scale-[1.02]"
+                  >
+                    <h3 className="font-semibold text-foreground mb-3">{skill.title}</h3>
+                    <p className="text-muted-foreground text-sm leading-relaxed">{skill.skills}</p>
                   </div>
-                  <div className="flex-1">
-                    <h3 className="text-xl font-bold text-gray-800 mb-3">
-                      {qualification.title}
-                    </h3>
-                    <p className="text-gray-600 mb-3">
-                      <strong className="text-gray-800">Institution:</strong> {qualification.institution}
-                    </p>
-                    {qualification.verification && (
-                      <p className="text-gray-600">
-                        <strong className="text-gray-800">Verification ID:</strong> 
-                        <span className="bg-gray-100 text-gray-800 px-2 py-1 rounded-md text-sm ml-2 font-mono">
-                          {qualification.verification}
-                        </span>
-                      </p>
-                    )}
-                    <div className="mt-4">
-                      <span className="inline-block bg-gradient-to-r from-green-500 to-emerald-600 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                ))}
+              </div>
+            </div>
+
+            {/* Certifications Section */}
+            <div>
+              <div className="text-center lg:text-left mb-6">
+                <h2 className="text-2xl font-bold text-foreground mb-2">Certifications</h2>
+                <p className="text-muted-foreground">Industry-recognized qualifications</p>
+              </div>
+
+              <div className="space-y-4">
+                {[
+                  {
+                    title: "JavaScript Essentials 1",
+                    institution: "Cisco Networking Academy"
+                  },
+                  {
+                    title: "Networking Basics", 
+                    institution: "Cisco Certified Network Associate (CCNA)"
+                  },
+                  {
+                    title: "Computer Hardware Basics",
+                    institution: "Cisco Networking Academy" 
+                  },
+                  {
+                    title: "Web Design for Beginners",
+                    institution: "University Of Moratuwa",
+                    verification: "4uCeJKPGFG"
+                  }
+                ].map((cert, index) => (
+                  <div 
+                    key={index}
+                    className="bg-background/50 backdrop-blur-sm rounded-xl p-5 border border-foreground/10 hover:border-foreground/20 transition-all duration-300 hover:scale-[1.02]"
+                  >
+                    <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3">
+                      <div className="flex-1">
+                        <h3 className="font-semibold text-foreground mb-2">{cert.title}</h3>
+                        <p className="text-muted-foreground text-sm mb-2">{cert.institution}</p>
+                        {cert.verification && (
+                          <p className="text-xs text-muted-foreground">
+                            Verification ID: <code className="bg-foreground/5 px-2 py-1 rounded">{cert.verification}</code>
+                          </p>
+                        )}
+                      </div>
+                      <span className="bg-green-500/10 text-green-600 px-3 py-1 rounded-full text-xs font-medium whitespace-nowrap h-fit">
                         Certified
                       </span>
                     </div>
                   </div>
-                </div>
+                ))}
               </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Timeline Section (Bonus) */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-white/50 backdrop-blur-sm">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent mb-4">
-              Learning Journey
-            </h2>
-          </div>
-          
-          <div className="relative">
-            {/* Timeline line */}
-            <div className="absolute left-1/2 transform -translate-x-1/2 w-1 h-full bg-gradient-to-b from-blue-500 to-purple-600 rounded-full"></div>
-            
-            {/* Timeline items */}
-            {[
-              { year: "2023", title: "Started BSc in IT", description: "Began undergraduate studies at SLIIT" },
-              { year: "2024", title: "Web Development Focus", description: "Mastered React, Node.js, and modern web technologies" },
-              { year: "2025", title: "Professional Certifications", description: "Completed Cisco and specialized courses" },
-              { year: "2027", title: "Expected Graduation", description: "BSc (Hons) in Information Technology" }
-            ].map((item, index) => (
-              <div key={index} className={`flex items-center mb-12 ${index % 2 === 0 ? 'flex-row' : 'flex-row-reverse'}`}>
-                <div className="w-1/2 pr-8 pl-8">
-                  <div className="bg-white rounded-2xl shadow-lg p-6 border border-gray-200">
-                    <div className="text-sm font-semibold text-blue-600 mb-2">{item.year}</div>
-                    <h3 className="text-lg font-bold text-gray-800 mb-2">{item.title}</h3>
-                    <p className="text-gray-600">{item.description}</p>
-                  </div>
-                </div>
-                <div className="w-8 h-8 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full border-4 border-white shadow-lg z-10"></div>
-                <div className="w-1/2 pl-8 pr-8"></div>
-              </div>
-            ))}
+            </div>
           </div>
         </div>
       </section>
