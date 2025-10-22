@@ -35,17 +35,14 @@ export default function Home() {
         {/* Gradient overlay for better text readability */}
         <div className="absolute inset-0 bg-gradient-to-br from-background/80 via-background/40 to-background/90" />
       </div>
-      
+
       {/* Content */}
       <div className="relative z-10 font-sans pt-24 pb-8 px-4 sm:px-6 min-h-screen flex items-center">
         <main className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-12 max-w-7xl mx-auto w-full">
-          
+
           {/* Profile Image Section - Optimized for Mobile */}
           <div className="flex-0 flex justify-center order-1 lg:order-2 mb-6 lg:mb-0">
-            <div className="relative group">
-              {/* Background Glow Effect */}
-              <div className="absolute -inset-3 sm:-inset-4 bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl blur-md sm:blur-lg opacity-30 group-hover:opacity-50 transition-all duration-500"></div>
-              
+            <div className="relative group">  
               {/* Profile Image Container */}
               <div className="relative w-64 h-64 sm:w-72 sm:h-72 lg:w-80 lg:h-80 rounded-xl overflow-hidden border-2 border-white/20 shadow-lg group-hover:shadow-xl transition-all duration-500 group-hover:scale-105">
                 <Image
@@ -56,7 +53,7 @@ export default function Home() {
                   priority
                   sizes="(max-width: 640px) 256px, (max-width: 1024px) 288px, 320px"
                 />
-                
+
                 {/* Overlay Gradient */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
               </div>
@@ -68,19 +65,19 @@ export default function Home() {
             {/* Hero Section */}
             <div className="space-y-4 sm:space-y-5">
               <div className="space-y-3 sm:space-y-4">
-  <h1 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-foreground">
-    Hi, I'm{" "}
-    <span className="bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500 bg-clip-text text-transparent font-bold">
-      Lahiru Illangasinghe
-    </span>
-  </h1>
-  <h2 className="text-base sm:text-lg lg:text-xl text-muted-foreground font-medium tracking-wide">
-    Full-Stack Developer & Creative Problem Solver
-  </h2>
-  <p className="text-sm sm:text-base text-muted-foreground/90 max-w-2xl leading-relaxed mx-auto lg:mx-0">
-    Passionate IT undergraduate at SLIIT University, specializing in building stunning web and mobile applications using modern technologies.
-  </p>
-</div>
+                <h1 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-foreground">
+                  Hi, I'm{" "}
+                  <span className="bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500 bg-clip-text text-transparent font-bold">
+                    Lahiru Illangasinghe
+                  </span>
+                </h1>
+                <h2 className="text-base sm:text-lg lg:text-xl text-muted-foreground font-medium tracking-wide">
+                  Full-Stack Developer & Creative Problem Solver
+                </h2>
+                <p className="text-sm sm:text-base text-muted-foreground/90 max-w-2xl leading-relaxed mx-auto lg:mx-0">
+                  I'm a passionate third-year undergraduate specializing in Information Technology at SLIIT University, specializing in building stunning and efficient web and mobile applications. I love creating seamless user experiences with modern technologies.
+                </p>
+              </div>
 
 
               {/* Stats */}
@@ -146,33 +143,35 @@ export default function Home() {
             </div>
 
             {/* Footer Links with React Icons */}
-            <div className="flex gap-6 sm:gap-8 flex-wrap items-center justify-center lg:justify-start pt-6">
+            <div className="flex gap-6 pt-4">
               <a
-                className="flex items-center gap-2 hover:underline hover:underline-offset-2 transition-all duration-300 hover:scale-105 text-foreground/70 hover:text-foreground text-sm sm:text-base"
                 href="https://github.com/LAHIRUKBI"
                 target="_blank"
                 rel="noopener noreferrer"
+                className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors group"
               >
-                <SiGithub className="w-5 h-5" />
-                GitHub
+                <SiGithub className="w-5 h-5 group-hover:scale-110 transition-transform" />
+                <span className="text-sm font-medium">GitHub</span>
               </a>
+
               <a
-                className="flex items-center gap-2 hover:underline hover:underline-offset-2 transition-all duration-300 hover:scale-105 text-foreground/70 hover:text-foreground text-sm sm:text-base"
                 href="https://linkedin.com/in/lahiru-i/"
                 target="_blank"
                 rel="noopener noreferrer"
+                className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors group"
               >
-                <SiLinkedin className="w-5 h-5" />
-                LinkedIn
+                <SiLinkedin className="w-5 h-5 group-hover:scale-110 transition-transform" />
+                <span className="text-sm font-medium">LinkedIn</span>
               </a>
+
               <a
-                className="flex items-center gap-2 hover:underline hover:underline-offset-2 transition-all duration-300 hover:scale-105 text-foreground/70 hover:text-foreground text-sm sm:text-base"
                 href="https://mega.nz/file/73hyGaBJ#0Y3r5mCYb4NtnW2I5RQyx60IacxpBlNTOsnsiJRJpU0"
                 target="_blank"
                 rel="noopener noreferrer"
+                className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors group"
               >
-                <HiDocument className="w-5 h-5" />
-                Resume
+                <HiDocument className="w-5 h-5 group-hover:scale-110 transition-transform" />
+                <span className="text-sm font-medium">Resume</span>
               </a>
             </div>
           </div>

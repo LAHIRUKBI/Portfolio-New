@@ -21,7 +21,7 @@ export default function Navigation() {
     { name: 'About', href: '/', icon: User },
     { name: 'Education', href: '/education', icon: GraduationCap },
     { name: 'Projects', href: '/projects', icon: Briefcase },
-    { name: 'Contact', href: '/contact', icon: Mail },
+    
   ];
 
   // Scroll hide / show like in your Navbar
