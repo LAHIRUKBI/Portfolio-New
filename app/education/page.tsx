@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import Image from 'next/image';
-import DotGrid from "../components/layout/DotGridBackground";
+import DotGrid from "../components/layout/Home_Layout/DotGrid_1";
 
 export default function Education() {
   return (

@@ -2,7 +2,7 @@
 import React from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-import DotGrid from "../components/layout/DotGridBackground";
+import DotGrid from "../components/layout/Home_Layout/DotGrid_1";
 
 export default function Projects() {
   const projects = [
