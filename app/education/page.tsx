@@ -23,7 +23,7 @@ export default function Education() {
       </div>
 
       {/* Education Section */}
-      <section className="relative z-10 font-sans pt-20 pb-8 px-4 sm:px-6">
+      <section className="relative z-10 font-sans pt-30 pb-8 px-4 sm:px-6">
         <div className="max-w-6xl mx-auto">
           
           {/* Header */}
@@ -42,8 +42,7 @@ export default function Education() {
               {/* Logo Section */}
               <div className="flex-shrink-0">
                 <div className="relative group">
-                  <div className="absolute -inset-3 bg-gradient-to-r from-blue-500 to-purple-600 rounded-2xl blur-md opacity-30 group-hover:opacity-50 transition-all duration-500"></div>
-                  <div className="relative w-40 h-40 bg-white rounded-2xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-500 p-3">
+                  <div >
                     <Image
                       src="/images/SLIIT_LOGO.png"
                       alt="SLIIT Logo"

@@ -23,7 +23,7 @@ const AnimatedHero: React.FC = () => {
   return (
     <div className="space-y-3 sm:space-y-4">
       <h1 className="text-2xl sm:text-4xl lg:text-5xl font-extrabold leading-tight text-foreground">
-        Hi, I'm{" "}
+        Hi there, I'm{" "}
         <span className="bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500 bg-clip-text text-transparent font-bold">
           <TypeWriter
             text="Lahiru Illangasinghe"
