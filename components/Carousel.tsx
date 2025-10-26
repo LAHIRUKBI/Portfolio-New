@@ -1,9 +1,10 @@
 import { useEffect, useState, useRef } from 'react';
-import { motion, PanInfo, useMotionValue, useTransform } from 'motion/react';
+import { motion, PanInfo, useMotionValue, useTransform, Transition } from 'framer-motion';
 import React, { JSX } from 'react';
 
 // replace icons with your own if needed
 import { FiCircle, FiCode, FiFileText, FiLayers, FiLayout } from 'react-icons/fi';
+
 export interface CarouselItem {
   title: string;
   description: string;
@@ -57,7 +58,17 @@ const DEFAULT_ITEMS: CarouselItem[] = [
 const DRAG_BUFFER = 0;
 const VELOCITY_THRESHOLD = 500;
 const GAP = 16;
-const SPRING_OPTIONS = { type: 'spring', stiffness: 300, damping: 30 };
+
+// Fixed transition types
+const SPRING_OPTIONS: Transition = { 
+  type: "spring" as const, 
+  stiffness: 300, 
+  damping: 30 
+};
+
+const RESET_TRANSITION: Transition = { 
+  duration: 0 
+};
 
 export default function Carousel({
   items = DEFAULT_ITEMS,
@@ -79,6 +90,7 @@ export default function Carousel({
   const [isResetting, setIsResetting] = useState<boolean>(false);
 
   const containerRef = useRef<HTMLDivElement>(null);
+  
   useEffect(() => {
     if (pauseOnHover && containerRef.current) {
       const container = containerRef.current;
@@ -110,7 +122,7 @@ export default function Carousel({
     }
   }, [autoplay, autoplayDelay, isHovered, loop, items.length, carouselItems.length, pauseOnHover]);
 
-  const effectiveTransition = isResetting ? { duration: 0 } : SPRING_OPTIONS;
+  const effectiveTransition: Transition = isResetting ? RESET_TRANSITION : SPRING_OPTIONS;
 
   const handleAnimationComplete = () => {
     if (loop && currentIndex === carouselItems.length - 1) {
