@@ -181,8 +181,8 @@ export default function Projects() {
           resistance={750}
           returnDuration={1.5}
         />
-        <div className="absolute inset-0 bg-gradient-to-br from-background/95 via-background/70 to-background/90" />
-        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-purple-900/10 via-transparent to-transparent" />
+        {/* Subtle gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-background/95 via-purple-900/5 to-background/90" />
       </div>
 
       {/* Projects Section */}
