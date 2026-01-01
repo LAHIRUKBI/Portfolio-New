@@ -42,7 +42,7 @@ export default function Home() {
         <main className="flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-12 max-w-7xl mx-auto w-full">
 
           {/* Profile Image Section with Glass Border Effect */}
-          <div className="flex-0 flex flex-col items-center justify-center order-1 lg:order-2 mb-6 lg:mb-0 -mt-0 lg:-mt-12">
+          <div className="flex-0 flex flex-col items-center justify-center order-1 lg:order-2 mb-6 lg:mb-0 -mt-8 lg:-mt-12">
             <div className="relative group">
               {/* Outer Glass Border Effect */}
               <div className="absolute -inset-3 rounded-xl bg-white/5 backdrop-blur-md border border-white/0 shadow-md pointer-events-none"></div>
