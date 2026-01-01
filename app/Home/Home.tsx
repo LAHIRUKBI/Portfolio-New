@@ -49,8 +49,8 @@ export default function Home() {
           resistance={750}
           returnDuration={1.5}
         />
-        {/* Gradient overlay optimized for mobile readability */}
-        <div className="absolute inset-0 bg-gradient-to-br from-background/90 via-background/50 to-background/95" />
+        {/* Subtle gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-br from-background/95 via-purple-900/5 to-background/90" />
       </div>
 
       {/* Content - Optimized for mobile with better positioning */}
@@ -93,7 +93,7 @@ export default function Home() {
                   <div key={index} className="text-center group cursor-default bg-white/5 backdrop-blur-sm rounded-lg p-3 md:p-0 md:bg-transparent">
                     <div className="relative flex flex-col items-center">
                       {stat.hasDot && (
-                        <div className="absolute -top-1 -right-1 md:-top-1 md:-right-2 w-1.5 h-1.5 md:w-2 md:h-2 bg-orange-500 rounded-full animate-pulse"></div>
+                        <div className="absolute -top-1 -right-1 md:-top-1 md:-right-2 w-1.5 h-1.5 md:w-2 md:h-2 bg-green-500 rounded-full animate-pulse"></div>
                       )}
                       <div className={`text-lg sm:text-xl md:text-2xl font-bold ${stat.color} transition-colors`}>
                         {stat.number}
