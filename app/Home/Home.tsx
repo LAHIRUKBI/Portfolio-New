@@ -10,7 +10,7 @@ import { useEffect, useState } from 'react';
 
 export default function Home() {
   const [isMobile, setIsMobile] = useState(false);
-  
+
   // Tech icons
   const techIcons = [
     { icon: <SiReact className="text-blue-500" />, title: "React", href: "https://react.dev" },
@@ -28,7 +28,7 @@ export default function Home() {
     const checkMobile = () => {
       setIsMobile(window.innerWidth < 768);
     };
-    
+
     checkMobile();
     window.addEventListener('resize', checkMobile);
     return () => window.removeEventListener('resize', checkMobile);
@@ -56,7 +56,7 @@ export default function Home() {
       {/* Content - Optimized for mobile with better positioning */}
       <div className="relative z-10 font-sans pt-20 md:pt-24 pb-8 px-4 sm:px-6 min-h-screen flex items-start md:items-center">
         <main className="flex flex-col lg:flex-row items-center justify-center gap-8 md:gap-10 lg:gap-12 max-w-7xl mx-auto w-full mt-8 md:mt-0">
-          
+
           {/* LEFT CONTENT SECTION - Now comes first on mobile */}
           <div className="flex-1 space-y-4 md:space-y-6 lg:space-y-1 text-center lg:text-left w-full order-2 lg:order-1">
             {/* Hero Section with Animations */}
@@ -83,11 +83,11 @@ export default function Home() {
                   { number: "10+", label: "Projects", color: "text-foreground group-hover:text-orange-500" },
                   { number: "3+", label: "Years Exp", color: "text-foreground group-hover:text-orange-500" },
                   { number: "8+", label: "Tech Stack", color: "text-foreground group-hover:text-orange-500" },
-                  { 
-                    number: "@Octick", 
-                    label: "Current Role", 
+                  {
+                    number: "@Octick",
+                    label: "Current Role",
                     color: "text-foreground group-hover:text-orange-500",
-                    hasDot: true 
+                    hasDot: true
                   }
                 ].map((stat, index) => (
                   <div key={index} className="text-center group cursor-default bg-white/5 backdrop-blur-sm rounded-lg p-3 md:p-0 md:bg-transparent">
@@ -116,7 +116,7 @@ export default function Home() {
                 <span>View My Work</span>
                 <FiArrowUpRight className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
               </a>
-              
+
               {/* Optional contact button for mobile */}
               <a
                 href="/contact"
@@ -153,15 +153,14 @@ export default function Home() {
                     </div>
 
                     {/* Title that fades in on hover - Always visible on mobile */}
-                    <div className={`text-[10px] xs:text-xs font-medium text-foreground/70 text-center ${
-                      isMobile ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'
-                    } transform ${isMobile ? 'translate-y-0' : 'translate-y-2'} group-hover:translate-y-0 transition-all duration-300`}>
+                    <div className={`text-[10px] xs:text-xs font-medium text-foreground/70 text-center ${isMobile ? 'opacity-100' : 'opacity-0 group-hover:opacity-100'
+                      } transform ${isMobile ? 'translate-y-0' : 'translate-y-2'} group-hover:translate-y-0 transition-all duration-300`}>
                       {tech.title}
                     </div>
                   </a>
                 ))}
               </div>
-              
+
               {/* Mobile hint */}
               <p className="text-center text-xs text-muted-foreground/60 mt-4 md:hidden">
                 Tap icons to learn more about each technology
@@ -220,7 +219,7 @@ export default function Home() {
                       <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-2 h-2 bg-orange-600 rotate-45"></div>
                     </div>
                   </div>
-                  
+
                   {/* Mobile touch hint */}
                   <div className="text-[10px] text-gray-400 text-center mt-1 opacity-70 md:hidden">
                     Tap for details
@@ -231,32 +230,54 @@ export default function Home() {
 
             {/* Enhanced Footer Links - Mobile Responsive */}
             <div className="mt-8 md:mt-10 px-4 py-2 md:px-6 md:py-3 rounded-full bg-white/5 border border-white/10 backdrop-blur-xl shadow-2xl flex items-center justify-between gap-3 md:gap-4 transform hover:scale-105 transition-all duration-300 z-20 w-full max-w-sm">
-              <a href="https://github.com/LAHIRUKBI" target="_blank" rel="noopener noreferrer" className="relative group flex flex-col items-center text-muted-foreground hover:text-foreground transition-colors p-2 rounded-lg active:bg-white/10">
+              <a
+                href="https://github.com/LAHIRUKBI"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="relative group flex flex-col items-center text-muted-foreground hover:text-foreground transition-colors p-2 rounded-lg active:bg-white/10"
+              >
                 <SiGithub className="w-5 h-5 md:w-6 md:h-6" />
-                <span className="absolute -top-8 left-1/2 -translate-x-1/2 bg-foreground text-background text-[10px] px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none hidden md:block">GitHub</span>
+                <span className="absolute -top-8 left-1/2 -translate-x-1/2 bg-foreground text-background text-[10px] px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none hidden md:block">
+                  GitHub
+                </span>
                 <span className="text-[10px] text-gray-400 mt-1 md:hidden">GitHub</span>
               </a>
-              
+
               <div className="w-[1px] h-4 md:h-6 bg-white/10"></div>
-              
-              <a href="https://linkedin.com/in/lahiru-i/" target="_blank" rel="noopener noreferrer" className="relative group flex flex-col items-center text-muted-foreground hover:text-blue-500 transition-colors p-2 rounded-lg active:bg-white/10">
+
+              <a
+                href="https://linkedin.com/in/lahiru-i/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="relative group flex flex-col items-center text-muted-foreground hover:text-blue-500 transition-colors p-2 rounded-lg active:bg-white/10"
+              >
                 <SiLinkedin className="w-5 h-5 md:w-6 md:h-6" />
-                <span className="absolute -top-8 left-1/2 -translate-x-1/2 bg-foreground text-background text-[10px] px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none hidden md:block">LinkedIn</span>
+                <span className="absolute -top-8 left-1/2 -translate-x-1/2 bg-foreground text-background text-[10px] px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none hidden md:block">
+                  LinkedIn
+                </span>
                 <span className="text-[10px] text-gray-400 mt-1 md:hidden">LinkedIn</span>
               </a>
-              
+
               <div className="w-[1px] h-4 md:h-6 bg-white/10"></div>
-              
-              <a href="https://mega.nz/file/73hyGaBJ#0Y3r5mCYb4NtnW2I5RQyx60IacxpBlNTOsnsiJRJpU0" target="_blank" rel="noopener noreferrer" className="relative group flex flex-col items-center text-muted-foreground hover:text-purple-400 transition-colors p-2 rounded-lg active:bg-white/10">
+
+              {/* Updated Resume Link */}
+              <a
+                href="/CV/Information Technology_Lahiru_CV.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="relative group flex flex-col items-center text-muted-foreground hover:text-purple-400 transition-colors p-2 rounded-lg active:bg-white/10"
+              >
                 <HiDocument className="w-5 h-5 md:w-6 md:h-6" />
-                <span className="absolute -top-8 left-1/2 -translate-x-1/2 bg-foreground text-background text-[10px] px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none hidden md:block">Resume</span>
+                <span className="absolute -top-8 left-1/2 -translate-x-1/2 bg-foreground text-background text-[10px] px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none hidden md:block">
+                  Resume
+                </span>
                 <span className="text-[10px] text-gray-400 mt-1 md:hidden">Resume</span>
               </a>
             </div>
           </div>
         </main>
       </div>
-      
+
       {/* Mobile-specific styles */}
       <style jsx global>{`
         /* Better touch targets for mobile */
